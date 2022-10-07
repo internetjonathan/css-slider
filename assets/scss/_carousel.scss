@@ -5,10 +5,11 @@
     width: 100%;
     max-width: 800px;
     display: block;
-    margin: 50px auto;
+    margin: 30px auto;
+    
 }
 
-.carousel-item {
+.carousel-image {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -29,11 +30,11 @@
     left: 10px;
     position: absolute;
     top: 50%;
-    color: #8ed790;
+    color: $mainGreen ;
     font-size: 30px;
-    text-shadow: 2px 2px 2px rgba(16, 16, 16, 0.7); 
+    text-shadow: $textShadow; 
     &:hover {
-        color: #375f38;
+        color: $darkGreen;
         ;
     }
 
@@ -43,11 +44,11 @@
     right: 10px;
     position: absolute;
     top: 50%;
-    color: #8ed790;
+    color: $mainGreen;
     font-size: 30px;
-    text-shadow: 2px 2px 2px rgba(16, 16, 16, 0.4); 
+    text-shadow: $textShadow; 
     &:hover {
-        color: #375f38;
+        color: $darkGreen;
         ;
     }
 
@@ -56,45 +57,47 @@
 .carousel-nav {
     text-align: center;
     i {
-        color: #8ed790;
-        text-shadow: 2px 2px 2px rgba(16, 16, 16, 0.7); 
+        color: $mainGreen;
+        text-shadow: $textShadow; 
         &:hover {
-            color: #375f38;
+            color: $darkGreen;
             ;
         }
     }
 }
 
-  [id^= "item"] {
+  [id^= "image"] {
     display: none;
   }
 
+
+//loop to create 10 image paths
 @for $i from 2 through 10 {
-    .item-#{$i} {
-        background: url('image-'+$i+'.jpg');
+    .image-#{$i} {
+        background: url('../img/image-'+$i+'.jpg');
         background-size: cover;
     }
 }
 
-.item-1 {
+.image-1 {
     z-index: 2;
     opacity: 1;
-    background: url('image.jpg');
+    background: url('../imgimage.jpg');
     background-size: cover;
 }
 
-:target~.item-1 {
+:target~.image-1 {
     opacity: 0;
 }
 
-#item-1:target~.item-1 {
+#image-1:target~.image-1 {
     opacity: 1;
 
 }
 
-
+//loop to add css properties to multiple selectors
 @for $i from 2 through 10 {
-    #item-#{$i}:target~.item-#{$i} {
+    #image-#{$i}:target~.image-#{$i} {
         z-index: 3;
         opacity: 1;
         ;

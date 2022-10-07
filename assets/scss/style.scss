@@ -1,9 +1,11 @@
 @import "./reset";
+@import "./variables";
 @import "./carousel";
 
 
 
 h1 {
+    padding-top: 30px;
     font-size: 4em;
     text-align: center;
     font-family: helvetica;
