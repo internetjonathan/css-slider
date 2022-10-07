@@ -217,6 +217,10 @@ table {
   opacity: 1;
 }
 
+.main-green {
+  color: #8ed790;
+}
+
 h1 {
   padding-top: 30px;
   font-size: 4em;
