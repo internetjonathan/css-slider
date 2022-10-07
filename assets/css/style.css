@@ -59,6 +59,11 @@ table {
   display: block;
   margin: 30px auto;
 }
+@media (max-width: 768px) {
+  .carousel-wrapper {
+    height: 60vh;
+  }
+}
 
 .carousel-image {
   position: absolute;

@@ -5,6 +5,10 @@
      width: 100%;
     display: block;
     margin: 30px auto;
+
+    @include mobile {
+        height: 60vh;
+    }
     
 }
 
