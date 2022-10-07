@@ -112,10 +112,6 @@ table {
   color: #375f38;
 }
 
-[id^=image] {
-  display: none;
-}
-
 .image-2 {
   background: url("../img/image-2.jpg");
   background-size: cover;
@@ -164,7 +160,7 @@ table {
 .image-1 {
   z-index: 2;
   opacity: 1;
-  background: url("../imgimage.jpg");
+  background: url("../img/image.jpg");
   background-size: cover;
 }
 
