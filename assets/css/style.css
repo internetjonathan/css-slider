@@ -64,8 +64,7 @@ table {
     height: 60vh;
   }
 }
-
-.carousel-image {
+.carousel-wrapper .carousel-image {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -75,13 +74,11 @@ table {
   opacity: 0;
   transition: all 0.5s;
 }
-
-.arrow {
+.carousel-wrapper .arrow {
   display: inline-block;
   padding: 12px;
 }
-
-.prev {
+.carousel-wrapper .prev {
   left: 10px;
   position: absolute;
   top: 50%;
@@ -89,11 +86,10 @@ table {
   font-size: 30px;
   text-shadow: 2px 2px 2px rgba(16, 16, 16, 0.7);
 }
-.prev:hover {
+.carousel-wrapper .prev:hover {
   color: #375f38;
 }
-
-.next {
+.carousel-wrapper .next {
   right: 10px;
   position: absolute;
   top: 50%;
@@ -101,8 +97,92 @@ table {
   font-size: 30px;
   text-shadow: 2px 2px 2px rgba(16, 16, 16, 0.7);
 }
-.next:hover {
+.carousel-wrapper .next:hover {
   color: #375f38;
+}
+.carousel-wrapper .image-2 {
+  background: url("../img/image-2.jpg");
+  background-size: cover;
+}
+.carousel-wrapper .image-3 {
+  background: url("../img/image-3.jpg");
+  background-size: cover;
+}
+.carousel-wrapper .image-4 {
+  background: url("../img/image-4.jpg");
+  background-size: cover;
+}
+.carousel-wrapper .image-5 {
+  background: url("../img/image-5.jpg");
+  background-size: cover;
+}
+.carousel-wrapper .image-6 {
+  background: url("../img/image-6.jpg");
+  background-size: cover;
+}
+.carousel-wrapper .image-7 {
+  background: url("../img/image-7.jpg");
+  background-size: cover;
+}
+.carousel-wrapper .image-8 {
+  background: url("../img/image-8.jpg");
+  background-size: cover;
+}
+.carousel-wrapper .image-9 {
+  background: url("../img/image-9.jpg");
+  background-size: cover;
+}
+.carousel-wrapper .image-10 {
+  background: url("../img/image-10.jpg");
+  background-size: cover;
+}
+.carousel-wrapper .image-1 {
+  z-index: 2;
+  opacity: 1;
+  background: url("../img/image.jpg");
+  background-size: cover;
+}
+.carousel-wrapper :target ~ .image-1 {
+  opacity: 0;
+}
+.carousel-wrapper #image-1:target ~ .image-1 {
+  opacity: 1;
+}
+.carousel-wrapper #image-2:target ~ .image-2 {
+  z-index: 3;
+  opacity: 1;
+}
+.carousel-wrapper #image-3:target ~ .image-3 {
+  z-index: 3;
+  opacity: 1;
+}
+.carousel-wrapper #image-4:target ~ .image-4 {
+  z-index: 3;
+  opacity: 1;
+}
+.carousel-wrapper #image-5:target ~ .image-5 {
+  z-index: 3;
+  opacity: 1;
+}
+.carousel-wrapper #image-6:target ~ .image-6 {
+  z-index: 3;
+  opacity: 1;
+}
+.carousel-wrapper #image-7:target ~ .image-7 {
+  z-index: 3;
+  opacity: 1;
+}
+.carousel-wrapper #image-8:target ~ .image-8 {
+  z-index: 3;
+  opacity: 1;
+}
+.carousel-wrapper #image-9:target ~ .image-9 {
+  z-index: 3;
+  opacity: 1;
+}
+.carousel-wrapper #image-10:target ~ .image-10 {
+  z-index: 3;
+  opacity: 1;
 }
 
 .carousel-nav {
@@ -114,111 +194,6 @@ table {
 }
 .carousel-nav i:hover {
   color: #375f38;
-}
-
-.image-2 {
-  background: url("../img/image-2.jpg");
-  background-size: cover;
-}
-
-.image-3 {
-  background: url("../img/image-3.jpg");
-  background-size: cover;
-}
-
-.image-4 {
-  background: url("../img/image-4.jpg");
-  background-size: cover;
-}
-
-.image-5 {
-  background: url("../img/image-5.jpg");
-  background-size: cover;
-}
-
-.image-6 {
-  background: url("../img/image-6.jpg");
-  background-size: cover;
-}
-
-.image-7 {
-  background: url("../img/image-7.jpg");
-  background-size: cover;
-}
-
-.image-8 {
-  background: url("../img/image-8.jpg");
-  background-size: cover;
-}
-
-.image-9 {
-  background: url("../img/image-9.jpg");
-  background-size: cover;
-}
-
-.image-10 {
-  background: url("../img/image-10.jpg");
-  background-size: cover;
-}
-
-.image-1 {
-  z-index: 2;
-  opacity: 1;
-  background: url("../img/image.jpg");
-  background-size: cover;
-}
-
-:target ~ .image-1 {
-  opacity: 0;
-}
-
-#image-1:target ~ .image-1 {
-  opacity: 1;
-}
-
-#image-2:target ~ .image-2 {
-  z-index: 3;
-  opacity: 1;
-}
-
-#image-3:target ~ .image-3 {
-  z-index: 3;
-  opacity: 1;
-}
-
-#image-4:target ~ .image-4 {
-  z-index: 3;
-  opacity: 1;
-}
-
-#image-5:target ~ .image-5 {
-  z-index: 3;
-  opacity: 1;
-}
-
-#image-6:target ~ .image-6 {
-  z-index: 3;
-  opacity: 1;
-}
-
-#image-7:target ~ .image-7 {
-  z-index: 3;
-  opacity: 1;
-}
-
-#image-8:target ~ .image-8 {
-  z-index: 3;
-  opacity: 1;
-}
-
-#image-9:target ~ .image-9 {
-  z-index: 3;
-  opacity: 1;
-}
-
-#image-10:target ~ .image-10 {
-  z-index: 3;
-  opacity: 1;
 }
 
 .main-green {

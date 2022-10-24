@@ -10,51 +10,85 @@
         height: 60vh;
     }
     
-}
-
-.carousel-image {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 25px 50px;
-    opacity: 0;
-    transition: all 0.5s;
-}
-
-.arrow {
-
-    display: inline-block;
-    padding: 12px;
-}
-
-.prev {
-    left: 10px;
-    position: absolute;
-    top: 50%;
-    color: $mainGreen ;
-    font-size: 30px;
-    text-shadow: $textShadow; 
-    &:hover {
-        color: $darkGreen;
-        ;
+    .carousel-image {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 25px 50px;
+        opacity: 0;
+        transition: all 0.5s;
     }
-
-}
-
-.next {
-    right: 10px;
-    position: absolute;
-    top: 50%;
-    color: $mainGreen;
-    font-size: 30px;
-    text-shadow: $textShadow; 
-    &:hover {
-        color: $darkGreen;
-        ;
+    
+    .arrow {
+    
+        display: inline-block;
+        padding: 12px;
     }
-
+    
+    .prev {
+        left: 10px;
+        position: absolute;
+        top: 50%;
+        color: $mainGreen ;
+        font-size: 30px;
+        text-shadow: $textShadow; 
+        &:hover {
+            color: $darkGreen;
+            ;
+        }
+    
+    }
+    
+    .next {
+        right: 10px;
+        position: absolute;
+        top: 50%;
+        color: $mainGreen;
+        font-size: 30px;
+        text-shadow: $textShadow; 
+        &:hover {
+            color: $darkGreen;
+            ;
+        }
+    
+    }
+    
+  
+    
+    //loop to create 10 image paths
+    @for $i from 2 through 10 {
+        .image-#{$i} {
+            background: url('../img/image-'+$i+'.jpg');
+            background-size: cover;
+        }
+    }
+    
+    .image-1 {
+        z-index: 2;
+        opacity: 1;
+        background: url('../img/image.jpg');
+        background-size: cover;
+    }
+    
+    :target~.image-1 {
+        opacity: 0;
+    }
+    
+    #image-1:target~.image-1 {
+        opacity: 1;
+    
+    }
+    
+    //loop to add css properties to multiple selectors
+    @for $i from 2 through 10 {
+        #image-#{$i}:target~.image-#{$i} {
+            z-index: 3;
+            opacity: 1;
+            ;
+        }
+    }
 }
 
 .carousel-nav {
@@ -69,38 +103,7 @@
     }
 }
 
-//loop to create 10 image paths
-@for $i from 2 through 10 {
-    .image-#{$i} {
-        background: url('../img/image-'+$i+'.jpg');
-        background-size: cover;
-    }
-}
 
-.image-1 {
-    z-index: 2;
-    opacity: 1;
-    background: url('../img/image.jpg');
-    background-size: cover;
-}
-
-:target~.image-1 {
-    opacity: 0;
-}
-
-#image-1:target~.image-1 {
-    opacity: 1;
-
-}
-
-//loop to add css properties to multiple selectors
-@for $i from 2 through 10 {
-    #image-#{$i}:target~.image-#{$i} {
-        z-index: 3;
-        opacity: 1;
-        ;
-    }
-}
 
 //   video {
 //     position: absolute;
